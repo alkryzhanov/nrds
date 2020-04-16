@@ -222,11 +222,33 @@
         <p class="footer-content__subtitle">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </footer>
+    <section class="modal">
+      <h1 class="visually-hidden">Напишите нам что нибудь...</h1>
+      <form action="" class="write-us">
+        <h3 class="write-us__tittle">Напиши нам</h3>
+        <div class="write-us__row">
+          <p>
+            <label for="write-us__user-name">Ваше имя:</label>
+            <input type="text" name="write-us__user-name" id="write-us__user-name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="write-us__user-email">Ваш e-mail:</label>
+            <input type="email" name="write-us__user-email" id="write-us__user-email" placeholder="email@example.com">
+          </p>
+        </div>
+        <p>
+          <label for="write-us__text">Напишите нам</label>
+          <textarea name="write-us__feedback-text" id="write-us__feedback-text"
+            placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit" class="write-us__btn">Отправить</button>
+        <button class="modal-close">Закрыть</button>
+      </form>
+    </section>
   </div>
   <script type="text/javascript" src="./js/jquery.min.js"></script>
   <script type="text/javascript" src="./js/slick.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
-  //here will be new js file
 </body>
 
 </html>
