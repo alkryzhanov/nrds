@@ -1,12 +1,4 @@
 'use strict';
-//Slider block
-$(document).ready(function () {
-  $('.header-slider').slick({
-    dots: true,
-    arrows: false,
-
-  });
-});
 
 //Main block 
 
@@ -17,6 +9,9 @@ var overlay = document.querySelector('.overlay');
 var writeUsUserName = writeUsPopup.querySelector('[name=write-us__user-name]');
 var writeUsUserEmail = writeUsPopup.querySelector('[name=write-us__user-email]');
 var writeUsForm = writeUsPopup.querySelector('.write-us');
+var mapImg = document.querySelector('.map__img');
+var addressBlock = document.querySelector('.address-block');
+var footerListLink = document.querySelectorAll('.footer-list__link');
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
@@ -54,14 +49,27 @@ writeUsForm.addEventListener('submit', function (evt) {
   if (!writeUsUserName.value || !writeUsUserEmail.value) {
     evt.preventDefault();
     writeUsPopup.classList.add('modal-error');
-    // writeUsUserName.placeholder = 'PLease, enter your name!';
-    // writeUsUserEmail.placeholder = 'PLease, enter your email!';
-    // writeUsUserEmail.style.placeholder.color = 'red';
-    // console.log('Name and Email were not entered!');
-
   }
-
-  // console.log(writeUsUserName.value);
-  // console.log(writeUsUserEmail.value);
-
 })
+
+mapImg.addEventListener('mouseover', function (evt) {
+  evt.preventDefault();
+  addressBlock.classList.add('bounce-in-left');
+})
+mapImg.addEventListener('mouseout', function (evt) {
+  evt.preventDefault();
+  addressBlock.classList.remove('bounce-in-left');
+})
+
+for (let i = 0; i < footerListLink.length; i++) {
+  footerListLink[i].addEventListener('mouseover', function (evt) {
+    evt.preventDefault();
+    footerListLink[i].classList.add('pulsate-bck');
+  })
+
+  footerListLink[i].addEventListener('mouseout', function (evt) {
+    evt.preventDefault();
+    footerListLink[i].classList.remove('pulsate-bck');
+  })
+
+}

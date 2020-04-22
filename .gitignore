@@ -5,3 +5,7 @@ scss/
 *.scss
 *.DS_Store
 *.DS_Store
+
+css/style.css
+js/main.js
+
